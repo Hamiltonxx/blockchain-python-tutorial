@@ -1,45 +1,43 @@
-# Blockchain Python tutorial
-* Source Code for my blog post: [A Practical Introduction to Blockchain with Python](http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/)
+# 区块链python模拟教程
+* 源代码是基于 <Mastering Bitcoin 2nd>  https://github.com/dvf/blockchain  https://github.com/adilmoujahid/blockchain-python-tutorial 上的改进.
 
-## Important: This project is for educational purposes only and the source code shouldn't be use in production as it doesn't have good security, doesn't scale well and lacks many important features.
+## 注意: 此工程只可用于教学，不可商用，因为它没有很好的安全性和扩展性，也缺乏很多区块链的重要特性。
 
 
 <div style="display:block;margin:auto;height:80%;width:80%">
   <img src="blockchain-simulation.gif">
 </div>
 
-The github repository contains a basic implementation of a blockchain and its client using Python. This blockchain has the following features:
+该repo 采用python实现了一个基本的区块链及客户端，它拥有以下特性：
 
-- Possibility of adding multiple nodes to the blockchain
+- 可以在区块链中增加多个节点
 - Proof of Work (PoW)
-- Simple conflict resolution between nodes
-- Transactions with RSA encryption
+- 节点间的简单冲突处理
+- RSA加密的Transaction
 
-The blockchain client has the following features:
+区块链客户端拥有以下特性:
 
-- Wallets generation using Public/Private key encryption (based on RSA algorithm)
-- Generation of transactions with RSA encryption 
+- 采用加密 Public/Private key生成钱包(基于RSA算法)
+- 采用RSA加密生成Transactions
 
-This github repository also contains 2 dashboards: 
+该repo也包含了两个dashboards: 
 
-- "Blockchain Frontend" for miners 
-- "Blockchain Client" for users to generate wallets and send coins 
+- 供挖矿的"Blockchain Frontend"  
+- 供用户生成钱包和发送币的"Blockchain Client" 
 
 
-# Dependencies
+# 依赖库
 
-- Works with ```Python 3.6``` 
-- [Anaconda's Python distribution](https://www.continuum.io/downloads) contains all the dependencies for the code to run.
+- ```Python 3.6``` 环境
+- pip install -r requirements.txt
+- 也可以用[Anaconda's Python distribution](https://www.continuum.io/downloads) 
 
-# How to run the code
+# 怎么运行
 
-1. To start a blockchain node, go to ```blockchain``` folder and execute the command below:
+1. 开启一个区块链结点, 进入 ```blockchain``` 目录，执行以下命令 :
 ```python blockchain.py -p 5000```
-2. You can add a new node to blockchain by executing the same command and specifying a port that is not already used. For example, ```python blockchain.py -p 5001```
-3. TO start the blockchain client, go to ```blockchain_client``` folder and execute the command below:
+2. 你也可以增加一个节点，指定不同的端口号. 比如 ```python blockchain.py -p 5001```
+3. 开启区块链客户端, 进入 ```blockchain_client``` 目录，执行以下命令:
 ```python blockchain_client.py -p 8080```
-4. You can access the blockchain frontend and blockchain client dashboards from your browser by going to localhost:5000 and localhost:8080
+4. 现在你可以通过localhost:5000 访问区块链，通过localhost:8080访问客户端
 
-
-
-# Visit my Blog : http://adilmoujahid.com
